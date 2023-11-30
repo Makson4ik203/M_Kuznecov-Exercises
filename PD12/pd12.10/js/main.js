@@ -1,14 +1,14 @@
-let isTrue = true;
-let isFalse = false;
+const p = 5;
+const pz = 50;
+const a = 3;
+const az = 45;
+const k = 3;
+const t = 5;
 
-console.log(isTrue && isTrue); // true
-console.log(isTrue && isFalse); // false
-console.log(isFalse && isFalse); // false
-console.log(isTrue || isTrue); // true
-console.log(isTrue || isFalse); // true
-console.log(isFalse || isFalse); // false
-console.log(!isTrue); // false
-console.log(!isFalse); // true
-console.log(!isFalse && isTrue); // true
-console.log(!isFalse && !isTrue); // false
-console.log(!isFalse || isTrue); // true
+const distancija = (p * k * pz + a * k * az) / 100;
+const metrai = distancija | 0;
+const centimetrai = ((distancija - metrai) * 100) | 0;
+
+const greitis = distancija / t;
+
+console.log(`${metrai} ${centimetrai} ${greitis.toFixed(2)}`);

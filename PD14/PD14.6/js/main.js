@@ -1,6 +1,10 @@
 let eilute = 'JavaScript for all';
+let stack = [];
 
-// Sukuriame masyvą iš eilutės, apverčiame ir sujungiame atgal į eilutę
-let atvirksciaiEilute = Array.from(eilute).reverse().join('');
+for (let i = 0; i < eilute.length; i++) {
+  stack.push(eilute[i]);
+}
 
-console.log(atvirksciaiEilute);
+while (stack.length > 0) {
+  process.stdout.write(stack.pop());
+}

@@ -1,40 +1,18 @@
-// Tikriname ar a yra b daliklis naudodami if-then
-function isDivisibleIfThen(a, b) {
-    if (b === 0) {
-        console.log("Dalyba iš nulio negalima.");
-    } else if (a % b === 0) {
-        console.log(`${a} dalijasi iš ${b} be liekanos.`);
+// Funkcija, kuri nustato kuris dviženklio skaičiaus skaitmuo yra didesnis
+function didesnisSkaitmuo(dvizenklisSkaicius) {
+    // Konvertuojame skaičių į tekstą
+    const skaiciausTekstas = dvizenklisSkaicius.toString();
+
+    // Tikriname, ar skaitmuo pirmoje pozicijoje yra didesnis
+    if (parseInt(skaiciausTekstas[0]) > parseInt(skaiciausTekstas[1])) {
+        return `Pirmas skaitmuo (${skaiciausTekstas[0]}) yra didesnis.`;
+    } else if (parseInt(skaiciausTekstas[1]) > parseInt(skaiciausTekstas[0])) {
+        return `Antras skaitmuo (${skaiciausTekstas[1]}) yra didesnis.`;
     } else {
-        console.log(`${a} nedalijasi iš ${b} be liekanos.`);
+        return 'Skaitmenys yra lygūs.';
     }
-  }
-  
-  // Tikriname ar a yra b daliklis naudodami if-then-else
-  function isDivisibleIfThenElse(a, b) {
-    if (b === 0) {
-        console.log("Dalyba iš nulio negalima.");
-    } else {
-        if (a % b === 0) {
-            console.log(`${a} dalijasi iš ${b} be liekanos.`);
-        } else {
-            console.log(`${a} nedalijasi iš ${b} be liekanos.`);
-        }
-    }
-  }
-  
-  // Tikriname ar a yra b daliklis naudodami switch
-  function isDivisibleSwitch(a, b) {
-    if (b === 0) {
-        console.log("Dalyba iš nulio negalima.");
-    } else {
-        switch (a % b) {
-            case 0:
-                console.log(`${a} dalijasi iš ${b} be liekanos.`);
-                break;
-            default:
-                console.log(`${a} nedalijasi iš ${b} be liekanos.`);
-        }
-    }
-  }
-  
-  console.log(isDivisibleIfThen)
+}
+
+// Pavyzdys: nustatome, kuris skaitmuo yra didesnis skaičiuje 47
+const rezultatas = didesnisSkaitmuo(47);
+console.log(rezultatas);

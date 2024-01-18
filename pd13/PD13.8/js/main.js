@@ -1,16 +1,14 @@
-function checkInequality(a, b, c) {
-    return (a < b && b < c) || (b > a && a > c);
+// Funkcija, kuri patikrina nelygybę a < b < c arba b > a
+function patikrinkNelygybe(a, b, c) {
+    if ((a < b && b < c) || (b > a)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-// Example:
-let a = 2;
-let b = 5;
-let c = 8;
+// Pavyzdys: nustatome, ar tenkinama nelygybė su skaičiais 3, 7, 10
+const rezultatas = patikrinkNelygybe(3, 7, 10);
 
-let result = checkInequality(a, b, c);
-
-if (result) {
-    console.log(`Inequality ${a} < ${b} < ${c} or ${b} > ${a} > ${c} is satisfied.`);
-} else {
-    console.log(`Inequality ${a} < ${b} < ${c} or ${b} > ${a} > ${c} is not satisfied.`);
-}
+// Spausdiname rezultatą
+console.log(rezultatas ? 'Nelygybė tenkinama.' : 'Nelygybė netenkinama.');

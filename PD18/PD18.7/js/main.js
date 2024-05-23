@@ -1,17 +1,17 @@
 "use strict";
 
 function newFunction() {
-    const newPerson = firstPerson;
-    return newPerson;
+  const newPerson = firstPerson;
+  return newPerson;
 }
 
 const firstPerson = {
-    firstName:"Edvin", 
-    lastName:"Caplinski", 
-    age: 20,
-    fullName: function() {
-        return this.firstName + " " + this.lastName;
-    }
+  firstName: "Maksim",
+  lastName: "Kuznecov",
+  age: 20,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
 };
 console.log(firstPerson);
 

@@ -1,0 +1,20 @@
+.nav {
+  background-color: #f0f0f0; /* Fono spalva */
+  padding: 10px 20px; /* Pagalvėlės */
+}
+
+.ul {
+  list-style-type: none; /* Panaikiname sąrašo ženklelius */
+  padding: 0; /* Panaikiname pagalvėles */
+  margin: 0; /* Panaikiname tarpus */
+}
+
+.li {
+  display: inline; /* Elementai eilėje */
+  margin-right: 20px; /* Tarpas tarp elementų */
+}
+
+.link {
+  text-decoration: none; /* Panaikiname pabraukimus */
+  color: black; /* Nuorodos spalva */
+}
